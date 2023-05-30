@@ -1,6 +1,13 @@
 import express from 'express';
 import goalRoutes from './routes/goalRoute.js'
+import dotenv from 'dotenv';
+dotenv.config()
+import colors from 'colors';
 import { errorHandler } from './middleware/errorHandler.js'
+import connectDB from './config/db.js'
+
+
+connectDB()
 
 const port = process.env.PORT || 6000;
 
