@@ -1,5 +1,6 @@
 import express from 'express';
 import goalRoutes from './routes/goalRoute.js'
+import userRoutes from './routes/userRoutes.js'
 import dotenv from 'dotenv';
 dotenv.config()
 import colors from 'colors';
@@ -17,6 +18,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
 app.use('/api/goals', goalRoutes)
+app.use('/api/users', userRoutes)
 
 app.use(errorHandler)
 
