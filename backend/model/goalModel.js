@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import User from './userModel.js'
+
 
 const goalSchema = new mongoose.Schema(
   {
